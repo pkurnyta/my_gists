@@ -14,8 +14,8 @@
 		<li><%= link_to "Projekt na Github.com", "https://github.com/pkurnyta/my_gists" %></li>
 	</ul>
 
-
-<%= yield %>
 </div>
+<%= yield %>
+
 </body>
 </html>

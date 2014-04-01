@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+gem 'bootstrap-sass', '~> 2.3.1.0'
+
 gem 'pygments.rb'
 gem 'redcarpet'
 gem 'quiet_assets'
