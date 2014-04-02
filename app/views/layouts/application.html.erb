@@ -13,7 +13,12 @@
 		<li><%= link_to "Strona główna", "http://pk-gists.herokuapp.com" %></li>
 		<li><%= link_to "Projekt na Github.com", "https://github.com/pkurnyta/my_gists" %></li>
 	</ul>
-
+<div class="pull-right" style="padding: 3px;">
+<%= form_tag gists_path, :method => 'get',:class =>"form-search", :id => "gists_search" do %>
+<%= text_field_tag :search, params[:search], :class => 'input-medium search-query'%>
+<%= submit_tag "Szukaj", :name => nil, :class => 'btn btn-primary active' %>
+<% end %>
+</div>
 
 <%= yield %>
 </div>
