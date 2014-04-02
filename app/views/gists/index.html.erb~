@@ -16,7 +16,6 @@
     
 <div id="newGist">
 	<div id="naglowek">
-	<h1 id="listGist"># listing gists</h1>
 	
 	<%= link_to 'New Gist', new_gist_path %>
 	</div>
