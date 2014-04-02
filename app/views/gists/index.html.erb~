@@ -1,5 +1,5 @@
 <h1>Listing gists</h1>
-
+<%= link_to image_tag("http://s28.postimg.org/wiij4axll/document_delete.png", {:alt=>"Add", :title=>"Add"}), new_gist_path %>
 <table>
   <thead>
     <tr>
@@ -12,28 +12,15 @@
     </tr>
   </thead>
 
-  <tbody>
-    
-<div id="newGist">
-	<div id="naglowek">
-	
-	<%= link_to 'New Gist', new_gist_path %>
-	</div>
-</div>
-
-
-
-<div id="my-gists">
-	<%= render @gists %>
-	
-</div>
-
-  </tbody>
+  <tbody id="my-gists">
+    <%= render @gists %>
+</tbody>
 </table>
+
 <div id="infinite-scrolling">
 <%= will_paginate @gists, renderer: BootstrapPagination::Rails%>
 </div>
 <br>
 
-<%= link_to 'New Gist', new_gist_path %>
+
 
