@@ -959,3 +959,207 @@ Processing by GistsController#index as HTML
   [1m[35mGist Load (3.5ms)[0m  SELECT "gists".* FROM "gists"
   Rendered gists/index.html.erb within layouts/application (209.6ms)
 Completed 200 OK in 218ms (Views: 213.9ms | ActiveRecord: 3.5ms)
+  [1m[36m (19.0ms)[0m  [1mDROP TABLE "gists"[0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "gists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "snippet" text, "lang" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from block (2 levels) in <top (required)> at /home/student/ASI/my_gists/lib/tasks/export.rake:4)
+  [1m[36mGist Load (1.8ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY "gists"."id" ASC[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from block (2 levels) in <top (required)> at /home/student/ASI/my_gists/lib/tasks/export.rake:4)
+  [1m[36mGist Load (2.2ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY "gists"."id" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (64.4ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w C#"], ["lang", "c#"], ["snippet", "\n//Hello World in C#\nclass HelloWorld\n{\nstatic void Main()\n{\nSystem.Console.WriteLine(\"Hello, World!\");\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (24.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w C++"], ["lang", "c++"], ["snippet", "\n#include <iostream.h>\n\nmain()\n{\ncout << \"Hello World!\" << endl;\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (11.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w CSS"], ["lang", "css"], ["snippet", "\nbody:before {\ncontent: \"Hello World\";\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Delphi"], ["lang", "delphi"], ["snippet", "\nProgram Hello_World;\n\n{$APPTYPE CONSOLE}\n\nBegin\nWriteLn('Hello World');\nEnd.\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w HTMLu"], ["lang", "html"], ["snippet", "\n<HTML>\n<!-- Hello World in HTML -->\n<HEAD>\n<TITLE>Hello World!</TITLE>\n</HEAD>\n<BODY>\nHello World!\n</BODY>\n</HTML>\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (4.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Javie"], ["lang", "java"], ["snippet", "\nclass HelloWorld {\nstatic public void main( String args[] ) {\nSystem.out.println( \"Hello World!\" );\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Pascalu"], ["lang", "pascal"], ["snippet", "\n{Hello World in Pascal}\n\nprogram HelloWorld(output);\nbegin\nWriteLn('Hello World!');\nend.\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (13.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Perlu"], ["lang", "perl"], ["snippet", "\n# Hello world in perl\n\nprint \"Hello World!\\n\";\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w PHP"], ["lang", "php"], ["snippet", "\n<?php\n// Hello World in PHP\necho 'Hello World!';\n?>\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (18.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Microsoft Powershell"], ["lang", "powershell"], ["snippet", "\n# Hello World in Microsoft Powershell\n\n'Hello World!'\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Pythonie"], ["lang", "python"], ["snippet", "\n# Hello World in Python\nprint \"Hello World\"\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Ruby"], ["lang", "ruby"], ["snippet", "\n# Hello World in Ruby\nputs \"Hello World!\"\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w SQL"], ["lang", "sql"], ["snippet", "\n# Hello World in SQL\n\nSELECT 'Hello World';\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (8.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w Scala"], ["lang", "scala"], ["snippet", "\n// Hello World in Scala\n\nobject HelloWorld with Application {\nConsole.println(\"Hello world!\");\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w TeX"], ["lang", "tex"], ["snippet", "\n% Hello World in plain \\TeX\n\\immediate\\write16{Hello World!}\n\\end\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00], ["description", "Hello World w C"], ["lang", "c"], ["snippet", "\n#include <stdio.h>\nint main(void)\n{\nprintf(\"Hello, world!\\n\");\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:06:03 UTC +00:00]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w C#"], ["lang", "c#"], ["snippet", "\n//Hello World in C#\nclass HelloWorld\n{\nstatic void Main()\n{\nSystem.Console.WriteLine(\"Hello, World!\");\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (50.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w C++"], ["lang", "c++"], ["snippet", "\n#include <iostream.h>\n\nmain()\n{\ncout << \"Hello World!\" << endl;\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w CSS"], ["lang", "css"], ["snippet", "\nbody:before {\ncontent: \"Hello World\";\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (4.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Delphi"], ["lang", "delphi"], ["snippet", "\nProgram Hello_World;\n\n{$APPTYPE CONSOLE}\n\nBegin\nWriteLn('Hello World');\nEnd.\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w HTMLu"], ["lang", "html"], ["snippet", "\n<HTML>\n<!-- Hello World in HTML -->\n<HEAD>\n<TITLE>Hello World!</TITLE>\n</HEAD>\n<BODY>\nHello World!\n</BODY>\n</HTML>\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (16.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Javie"], ["lang", "java"], ["snippet", "\nclass HelloWorld {\nstatic public void main( String args[] ) {\nSystem.out.println( \"Hello World!\" );\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Pascalu"], ["lang", "pascal"], ["snippet", "\n{Hello World in Pascal}\n\nprogram HelloWorld(output);\nbegin\nWriteLn('Hello World!');\nend.\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (17.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Perlu"], ["lang", "perl"], ["snippet", "\n# Hello world in perl\n\nprint \"Hello World!\\n\";\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w PHP"], ["lang", "php"], ["snippet", "\n<?php\n// Hello World in PHP\necho 'Hello World!';\n?>\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Microsoft Powershell"], ["lang", "powershell"], ["snippet", "\n# Hello World in Microsoft Powershell\n\n'Hello World!'\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Pythonie"], ["lang", "python"], ["snippet", "\n# Hello World in Python\nprint \"Hello World\"\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (5.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Ruby"], ["lang", "ruby"], ["snippet", "\n# Hello World in Ruby\nputs \"Hello World!\"\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w SQL"], ["lang", "sql"], ["snippet", "\n# Hello World in SQL\n\nSELECT 'Hello World';\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w Scala"], ["lang", "scala"], ["snippet", "\n// Hello World in Scala\n\nobject HelloWorld with Application {\nConsole.println(\"Hello world!\");\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w TeX"], ["lang", "tex"], ["snippet", "\n% Hello World in plain \\TeX\n\\immediate\\write16{Hello World!}\n\\end\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[35m (4.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00], ["description", "Hello World w C"], ["lang", "c"], ["snippet", "\n#include <stdio.h>\nint main(void)\n{\nprintf(\"Hello, world!\\n\");\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:01 UTC +00:00]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.1ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w C#"], ["lang", "c#"], ["snippet", "\n//Hello World in C#\nclass HelloWorld\n{\nstatic void Main()\n{\nSystem.Console.WriteLine(\"Hello, World!\");\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (177.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w C++"], ["lang", "c++"], ["snippet", "\n#include <iostream.h>\n\nmain()\n{\ncout << \"Hello World!\" << endl;\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w CSS"], ["lang", "css"], ["snippet", "\nbody:before {\ncontent: \"Hello World\";\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (21.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Delphi"], ["lang", "delphi"], ["snippet", "\nProgram Hello_World;\n\n{$APPTYPE CONSOLE}\n\nBegin\nWriteLn('Hello World');\nEnd.\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w HTMLu"], ["lang", "html"], ["snippet", "\n<HTML>\n<!-- Hello World in HTML -->\n<HEAD>\n<TITLE>Hello World!</TITLE>\n</HEAD>\n<BODY>\nHello World!\n</BODY>\n</HTML>\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (4.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Javie"], ["lang", "java"], ["snippet", "\nclass HelloWorld {\nstatic public void main( String args[] ) {\nSystem.out.println( \"Hello World!\" );\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Pascalu"], ["lang", "pascal"], ["snippet", "\n{Hello World in Pascal}\n\nprogram HelloWorld(output);\nbegin\nWriteLn('Hello World!');\nend.\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (4.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Perlu"], ["lang", "perl"], ["snippet", "\n# Hello world in perl\n\nprint \"Hello World!\\n\";\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w PHP"], ["lang", "php"], ["snippet", "\n<?php\n// Hello World in PHP\necho 'Hello World!';\n?>\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Microsoft Powershell"], ["lang", "powershell"], ["snippet", "\n# Hello World in Microsoft Powershell\n\n'Hello World!'\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Pythonie"], ["lang", "python"], ["snippet", "\n# Hello World in Python\nprint \"Hello World\"\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Ruby"], ["lang", "ruby"], ["snippet", "\n# Hello World in Ruby\nputs \"Hello World!\"\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w SQL"], ["lang", "sql"], ["snippet", "\n# Hello World in SQL\n\nSELECT 'Hello World';\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w Scala"], ["lang", "scala"], ["snippet", "\n// Hello World in Scala\n\nobject HelloWorld with Application {\nConsole.println(\"Hello world!\");\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (12.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w TeX"], ["lang", "tex"], ["snippet", "\n% Hello World in plain \\TeX\n\\immediate\\write16{Hello World!}\n\\end\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[35m (4.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00], ["description", "Hello World w C"], ["lang", "c"], ["snippet", "\n#include <stdio.h>\nint main(void)\n{\nprintf(\"Hello, world!\\n\");\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:06 UTC +00:00]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w C#"], ["lang", "c#"], ["snippet", "\n//Hello World in C#\nclass HelloWorld\n{\nstatic void Main()\n{\nSystem.Console.WriteLine(\"Hello, World!\");\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (54.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w C++"], ["lang", "c++"], ["snippet", "\n#include <iostream.h>\n\nmain()\n{\ncout << \"Hello World!\" << endl;\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (25.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w CSS"], ["lang", "css"], ["snippet", "\nbody:before {\ncontent: \"Hello World\";\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (11.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Delphi"], ["lang", "delphi"], ["snippet", "\nProgram Hello_World;\n\n{$APPTYPE CONSOLE}\n\nBegin\nWriteLn('Hello World');\nEnd.\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w HTMLu"], ["lang", "html"], ["snippet", "\n<HTML>\n<!-- Hello World in HTML -->\n<HEAD>\n<TITLE>Hello World!</TITLE>\n</HEAD>\n<BODY>\nHello World!\n</BODY>\n</HTML>\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (4.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Javie"], ["lang", "java"], ["snippet", "\nclass HelloWorld {\nstatic public void main( String args[] ) {\nSystem.out.println( \"Hello World!\" );\n}\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Pascalu"], ["lang", "pascal"], ["snippet", "\n{Hello World in Pascal}\n\nprogram HelloWorld(output);\nbegin\nWriteLn('Hello World!');\nend.\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Perlu"], ["lang", "perl"], ["snippet", "\n# Hello world in perl\n\nprint \"Hello World!\\n\";\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w PHP"], ["lang", "php"], ["snippet", "\n<?php\n// Hello World in PHP\necho 'Hello World!';\n?>\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (4.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Microsoft Powershell"], ["lang", "powershell"], ["snippet", "\n# Hello World in Microsoft Powershell\n\n'Hello World!'\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Pythonie"], ["lang", "python"], ["snippet", "\n# Hello World in Python\nprint \"Hello World\"\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (4.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Ruby"], ["lang", "ruby"], ["snippet", "\n# Hello World in Ruby\nputs \"Hello World!\"\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w SQL"], ["lang", "sql"], ["snippet", "\n# Hello World in SQL\n\nSELECT 'Hello World';\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w Scala"], ["lang", "scala"], ["snippet", "\n// Hello World in Scala\n\nobject HelloWorld with Application {\nConsole.println(\"Hello world!\");\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (15.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w TeX"], ["lang", "tex"], ["snippet", "\n% Hello World in plain \\TeX\n\\immediate\\write16{Hello World!}\n\\end\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "gists" ("created_at", "description", "lang", "snippet", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00], ["description", "Hello World w C"], ["lang", "c"], ["snippet", "\n#include <stdio.h>\nint main(void)\n{\nprintf(\"Hello, world!\\n\");\nreturn 0;\n}\n"], ["updated_at", Wed, 02 Apr 2014 12:08:14 UTC +00:00]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
