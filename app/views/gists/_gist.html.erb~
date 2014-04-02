@@ -18,7 +18,7 @@
 				<%= my_string %>
 			</p>
 			<p class="przyciski">
-				<%= link_to image_tag("https://cdn1.iconfinder.com/data/icons/simplicio/128x128/document_search.png", {:alt=>"Show", :title=>"Show"}) , gist, :class => 'showGist'  %>
+				<%= link_to image_tag("https://cdn1.iconfinder.com/data/icons/simplicio/128x128/document_search.png", {:alt=>"Show", :title=>"Show", :size=>"50%"}) , gist, :class => 'showGist'  %>
 				<%= link_to image_tag("https://cdn1.iconfinder.com/data/icons/simplicio/128x128/document_edit.png", {:alt=>"Edit", :title=>"Edit"}) , edit_gist_path(gist), :class => 'editGist' %>
 				<%= link_to image_tag("https://cdn1.iconfinder.com/data/icons/simplicio/128x128/document_delete.png", {:alt=>"Delete", :title=>"Delete"}) , gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'deleteGist' %>
 				
