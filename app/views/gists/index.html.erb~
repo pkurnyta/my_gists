@@ -15,17 +15,29 @@
   <tbody>
     <% @gists.each do |gist| %>
       <tr>
-        <td><%= gist.snippet %></td>
+        <td>
+        	<% my_snippet = gist.snippet[0..50] %>
+		<%= raw Pygments.highlight(my_snippet, lexer: gist.lang) %>
+        	</td>
         <td><%= gist.lang %></td>
-        <td><%= gist.description %></td>
-        <td><%= link_to 'Show', gist %></td>
-        <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
-        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+        	<% 
+					my_string = gist.description[0..50]
+					if(my_string.length > 49)
+						 my_string += "..."
+						end
+				%>
+				<%= my_string %>
+        </td>
+        <td><%= link_to image_tag("https://cdn4.iconfinder.com/data/icons/simplicio/128x128/document_search.png", {:alt=>"Show", :title=>"Show"}) , gist, :class => 'showGist'  %></td>
+        <td><%= link_to image_tag("https://cdn4.iconfinder.com/data/icons/simplicio/128x128/document_edit.png", {:alt=>"Edit", :title=>"Edit"}) , edit_gist_path(gist), :class => 'editGist' %></td>
+        <td><%= link_to image_tag("https://cdn4.iconfinder.com/data/icons/simplicio/128x128/document_delete.png", {:alt=>"Delete", :title=>"Delete"}) , gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'deleteGist' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<%= will_paginate @gists, renderer: BootstrapPagination::Rails%>
 <br>
 
 <%= link_to 'New Gist', new_gist_path %>
+
