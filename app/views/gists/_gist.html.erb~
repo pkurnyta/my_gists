@@ -1,0 +1,27 @@
+
+	<div class="gist">
+		<h1 class="jezyk"><%= gist.lang %></h1>
+		
+				<% 
+					my_snippet = gist.snippet[0..50]
+				%>
+		<%= raw Pygments.highlight(my_snippet, lexer: gist.lang) %>
+			
+		<div>
+			<p class="opis">
+				<% 
+					my_string = gist.description[0..50]
+					if(my_string.length > 49)
+						 my_string += "..."
+						end
+				%>
+				<%= my_string %>
+			</p>
+			<p class="przyciski">
+				<%= link_to image_tag("https://cdn1.iconfinder.com/data/icons/simplicio/128x128/document_search.png", {:alt=>"Show", :title=>"Show"}) , gist, :class => 'showGist'  %>
+				<%= link_to image_tag("https://cdn1.iconfinder.com/data/icons/simplicio/128x128/document_edit.png", {:alt=>"Edit", :title=>"Edit"}) , edit_gist_path(gist), :class => 'editGist' %>
+				<%= link_to image_tag("https://cdn1.iconfinder.com/data/icons/simplicio/128x128/document_delete.png", {:alt=>"Delete", :title=>"Delete"}) , gist, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'deleteGist' %>
+				
+			</p>
+		</div>
+	</div>
