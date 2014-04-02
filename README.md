@@ -13,6 +13,7 @@ Zrealizowane zadania:
     - ikony dla operacji CRUD
     - kolorowanie kodu
     - przycinanie kodu
+    - select przy wprowadzaniu języka
     - paginacja
     - infinite scrolling
     - wyszukiwarka (po opisie)
