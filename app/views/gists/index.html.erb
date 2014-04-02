@@ -25,7 +25,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= will_paginate @gists, renderer: BootstrapPagination::Rails%>
 <br>
 
 <%= link_to 'New Gist', new_gist_path %>

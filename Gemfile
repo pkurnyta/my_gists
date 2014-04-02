@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 
 gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'will_paginate-bootstrap'
+gem 'will_paginate', '~> 3.0.5'
 
 gem 'pygments.rb'
 gem 'redcarpet'
