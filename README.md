@@ -10,6 +10,7 @@ Zrealizowane zadania:
     - bootstrap
     - responsywność
     - zmiana css
+    - ikony dla operacji CRUD
     - kolorowanie kodu
     - przycinanie kodu
     - paginacja
