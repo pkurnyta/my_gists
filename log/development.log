@@ -2347,3 +2347,21 @@ Processing by GistsController#index as JS
   Rendered gists/_gist.html.erb (514.4ms)
   Rendered gists/index.js.erb (525.2ms)
 Completed 200 OK in 534ms (Views: 533.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/gists" for 127.0.0.1 at 2014-04-02 20:27:34 +0200
+Processing by GistsController#index as HTML
+  [1m[35mGist Load (0.2ms)[0m  SELECT "gists".* FROM "gists" LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  Rendered gists/_gist.html.erb (512.6ms)
+  Rendered gists/index.html.erb within layouts/application (519.9ms)
+Completed 200 OK in 551ms (Views: 550.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/gists/1/edit" for 127.0.0.1 at 2014-04-02 20:27:39 +0200
+Processing by GistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGist Load (0.1ms)[0m  SELECT "gists".* FROM "gists" WHERE "gists"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered gists/_form.html.erb (60.8ms)
+  Rendered gists/edit.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 0.1ms)
