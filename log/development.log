@@ -3982,3 +3982,123 @@ Processing by GistsController#index as HTML
   Rendered gists/_gist.html.erb (411.7ms)
   Rendered gists/index.html.erb within layouts/application (424.7ms)
 Completed 200 OK in 434ms (Views: 432.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-03 12:35:48 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GistsController#index as HTML
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[35mGist Load (0.8ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  Rendered gists/_gist.html.erb (3016.1ms)
+  Rendered gists/index.html.erb within layouts/application (3167.1ms)
+Completed 200 OK in 4226ms (Views: 4150.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/gists?page=2&_=1396521354589" for 127.0.0.1 at 2014-04-03 12:35:59 +0200
+Processing by GistsController#index as JS
+  Parameters: {"page"=>"2", "_"=>"1396521354589"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[35mGist Load (0.8ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 10
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  Rendered gists/_gist.html.erb (1214.4ms)
+  Rendered gists/index.js.erb (1230.5ms)
+Completed 200 OK in 1259ms (Views: 1255.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gists?_=1396521354590&page=3" for 127.0.0.1 at 2014-04-03 12:36:02 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354590", "page"=>"3"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[35mGist Load (6.1ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 20
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  Rendered gists/_gist.html.erb (1036.3ms)
+  Rendered gists/index.js.erb (1054.7ms)
+Completed 200 OK in 1062ms (Views: 1050.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/gists?_=1396521354591&page=4" for 127.0.0.1 at 2014-04-03 12:36:03 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354591", "page"=>"4"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[35mGist Load (0.8ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 30
+  [1m[36m (5.3ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  Rendered gists/_gist.html.erb (1151.8ms)
+  Rendered gists/index.js.erb (1206.0ms)
+Completed 200 OK in 1209ms (Views: 1201.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/gists?_=1396521354592&page=5" for 127.0.0.1 at 2014-04-03 12:36:04 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354592", "page"=>"5"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[35mGist Load (0.8ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 40
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  Rendered gists/_gist.html.erb (1033.2ms)
+  Rendered gists/index.js.erb (1050.9ms)
+Completed 200 OK in 1056ms (Views: 1052.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/gists?_=1396521354593&page=6" for 127.0.0.1 at 2014-04-03 12:36:06 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354593", "page"=>"6"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[35mGist Load (3.6ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 50
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "gists"[0m
+  Rendered gists/_gist.html.erb (1041.5ms)
+  Rendered gists/index.js.erb (1055.5ms)
+Completed 200 OK in 1059ms (Views: 1053.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/gists?_=1396521354594&page=7" for 127.0.0.1 at 2014-04-03 12:36:07 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354594", "page"=>"7"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[35mGist Load (0.7ms)[0m  SELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 60
+  Rendered gists/_gist.html.erb (518.3ms)
+  Rendered gists/index.js.erb (531.2ms)
+Completed 200 OK in 535ms (Views: 533.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/gists?_=1396521354594&page=3" for 127.0.0.1 at 2014-04-03 12:36:16 +0200
+Processing by GistsController#index as HTML
+  Parameters: {"_"=>"1396521354594", "page"=>"3"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[36mGist Load (0.9ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 20[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  Rendered gists/_gist.html.erb (1038.0ms)
+  Rendered gists/index.html.erb within layouts/application (1049.0ms)
+Completed 200 OK in 1067ms (Views: 1064.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/gists?_=1396521354595&page=4" for 127.0.0.1 at 2014-04-03 12:36:21 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354595", "page"=>"4"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[36mGist Load (1.1ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 30[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  Rendered gists/_gist.html.erb (1041.6ms)
+  Rendered gists/index.js.erb (1065.6ms)
+Completed 200 OK in 1078ms (Views: 1070.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/gists?_=1396521354596&page=5" for 127.0.0.1 at 2014-04-03 12:36:25 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354596", "page"=>"5"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[36mGist Load (4.7ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 40[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  Rendered gists/_gist.html.erb (1043.6ms)
+  Rendered gists/index.js.erb (1060.0ms)
+Completed 200 OK in 1067ms (Views: 1056.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/gists?_=1396521354597&page=6" for 127.0.0.1 at 2014-04-03 12:36:27 +0200
+Processing by GistsController#index as JS
+  Parameters: {"_"=>"1396521354597", "page"=>"6"}
+DEPRECATION WARNING: Model.scoped is deprecated. Please use Model.all instead. (called from search at /home/student/ASI/my_gists/app/models/gist.rb:7)
+  [1m[36mGist Load (0.9ms)[0m  [1mSELECT "gists".* FROM "gists" ORDER BY created_at DESC LIMIT 10 OFFSET 50[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "gists"
+  Rendered gists/_gist.html.erb (1038.8ms)
+  Rendered gists/index.js.erb (1057.5ms)
+Completed 200 OK in 1064ms (Views: 1060.7ms | ActiveRecord: 1.0ms)

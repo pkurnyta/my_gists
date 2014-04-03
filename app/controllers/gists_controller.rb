@@ -4,7 +4,7 @@ class GistsController < ApplicationController
   # GET /gists
   # GET /gists.json
   def index
-    @gists = Gist.search(params[:search]).paginate(page: params[:page], per_page: 5).order('created_at DESC')
+    @gists = Gist.search(params[:search]).paginate(page: params[:page], per_page: 10).order('created_at DESC')
 
       respond_to do |format|
       format.html
